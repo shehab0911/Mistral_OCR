@@ -170,7 +170,7 @@ if st.session_state.get("ocr_result"):
                 st.image(st.session_state["preview_src"][idx])
         
       
-        st.markdown("### ** Download Options**")
+        st.markdown("### Download Options")
         download_choice = st.selectbox(
             "**Select format for extracted text**",
             ("TXT", "Markdown", "JSON", "PDF"),
@@ -197,6 +197,6 @@ if st.session_state.get("ocr_result"):
             st.download_button(" Download PDF", pdf_buffer, file_name=f"OCR_Result.pdf", mime="application/pdf")
 
       
-        st.markdown("### ** Extracted Text**### ")
+        st.markdown("### Extracted")
         st.text_area("", value=result, height=300)
         st.markdown("</div>", unsafe_allow_html=True)
